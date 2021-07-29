@@ -1,0 +1,1 @@
+Copyright © 2021 Pedro Antunes Ribeiro César de Albuquerque. All rights reserved.

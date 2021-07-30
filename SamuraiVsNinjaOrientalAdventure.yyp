@@ -1,6 +1,18 @@
 {
   "resources": [
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"obj_game_init","path":"objects/obj_game_init/obj_game_init.yy",},"order":0,},
+    {"id":{"name":"obj_player_controller","path":"objects/obj_player_controller/obj_player_controller.yy",},"order":0,},
+    {"id":{"name":"spr_player_samurai_idle","path":"sprites/spr_player_samurai_idle/spr_player_samurai_idle.yy",},"order":0,},
+    {"id":{"name":"obj_player_spawn_test","path":"objects/obj_player_spawn_test/obj_player_spawn_test.yy",},"order":3,},
+    {"id":{"name":"spr_player_ninja_idle","path":"sprites/spr_player_ninja_idle/spr_player_ninja_idle.yy",},"order":0,},
+    {"id":{"name":"scr_player_kind_initialize","path":"scripts/scr_player_kind_initialize/scr_player_kind_initialize.yy",},"order":0,},
+    {"id":{"name":"spr_player_collision_box","path":"sprites/spr_player_collision_box/spr_player_collision_box.yy",},"order":3,},
+    {"id":{"name":"rm_game_test","path":"rooms/rm_game_test/rm_game_test.yy",},"order":1,},
+    {"id":{"name":"obj_game_buttons_controller","path":"objects/obj_game_buttons_controller/obj_game_buttons_controller.yy",},"order":1,},
+    {"id":{"name":"scr_player_check_movement_input_based_on_kind","path":"scripts/scr_player_check_movement_input_based_on_kind/scr_player_check_movement_input_based_on_kind.yy",},"order":2,},
+    {"id":{"name":"obj_player_animation","path":"objects/obj_player_animation/obj_player_animation.yy",},"order":1,},
+    {"id":{"name":"scr_player_states_initialize","path":"scripts/scr_player_states_initialize/scr_player_states_initialize.yy",},"order":1,},
+    {"id":{"name":"rm_game_init","path":"rooms/rm_game_init/rm_game_init.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Amazon Fire","path":"options/amazonfire/options_amazonfire.yy",},
@@ -21,7 +33,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_game_init","path":"rooms/rm_game_init/rm_game_init.yy",},},
+    {"roomId":{"name":"rm_game_test","path":"rooms/rm_game_test/rm_game_test.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -38,6 +51,12 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/player.yy","order":1,"resourceVersion":"1.0","name":"player","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/player.yy","order":1,"resourceVersion":"1.0","name":"player","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/player/samurai.yy","order":1,"resourceVersion":"1.0","name":"samurai","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/player/ninja.yy","order":2,"resourceVersion":"1.0","name":"ninja","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/player.yy","order":1,"resourceVersion":"1.0","name":"player","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/game.yy","order":2,"resourceVersion":"1.0","name":"game","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

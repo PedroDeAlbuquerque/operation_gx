@@ -4,9 +4,7 @@ function scr_player_states_initialize(){
 		spawn,
 		idle,
 		sprint,
-		sprint_end,
 		attack,
-		dash,
 		talk,
 		death
 	}

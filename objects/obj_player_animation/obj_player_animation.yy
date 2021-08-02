@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_player_samurai_idle",
-    "path": "sprites/spr_player_samurai_idle/spr_player_samurai_idle.yy",
+    "name": "spr_player_robot_samurai_idle",
+    "path": "sprites/spr_player_robot_samurai_idle/spr_player_robot_samurai_idle.yy",
   },
   "solid": false,
   "visible": true,

@@ -1,6 +1,9 @@
 /// @description Initialize the player object
 
-// Variable to store the player tyoe
+// Variable to store the player gamepad type
+player_buttons_identifier = -1;
+
+// Variable to store the player type
 player_type = -1;
 
 // Variables related to the player states
@@ -15,6 +18,13 @@ player_base_speed = 4;
 player_is_dashing = false;
 player_max_dash_delay = 30;
 player_current_dash_delay = player_max_dash_delay;
+// Sword attack related variables
+player_sword_hitbox = -1;
+player_sword_combo_max_timer = 15;
+player_sword_combo_timer = player_sword_combo_max_timer;
+player_sword_combo_is_being_executed = false;
+// Bullet shot related variables
+player_bullet_shot_is_executed = false;
 
 // Variables related to player animation
 player_animation = instance_create_layer(x, y, "Animation_Layer", obj_player_animation);

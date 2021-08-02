@@ -13,37 +13,152 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 	switch player_animation_owner.player_current_state {
 		case player_states.idle:
 			switch player_animation_owner.player_type {
-				case player_kind.samurai:
-					sprite_index = spr_player_samurai_idle;
+				case player_kind.robot_samurai:
+					sprite_index = spr_player_robot_samurai_idle;
 					break;
-				case player_kind.ninja:
-					sprite_index = spr_player_ninja_idle;
+				case player_kind.panda:
+					sprite_index = spr_player_panda_idle;
 					break;
 			}
 			break;
 		case player_states.sprint:
 			switch player_animation_owner.player_type {
-				case player_kind.samurai:
+				case player_kind.robot_samurai:
 					if not player_animation_owner.player_is_dashing {
-						sprite_index = spr_player_samurai_sprint;
+						sprite_index = spr_player_robot_samurai_sprint;
 					} else {
-						sprite_index = spr_player_samurai_dash;
+						sprite_index = spr_player_robot_samurai_dash;
 					}
 					break;
-				case player_kind.ninja:
-					if not player_animation_owner.player_is_dashing {
-						sprite_index = spr_player_ninja_sprint;
-					} else {
-						sprite_index = spr_player_ninja_dash;
-					}
+				case player_kind.panda:
+					sprite_index = spr_player_panda_sprint;
 					break;
 			}
 			break;
 		case player_states.attack:
+			switch player_animation_owner.player_type {
+				case player_kind.robot_samurai:
+					sprite_index = spr_player_robot_samurai_attack;
+					
+					// Handle robot samurai second attack if it's executing the attack combo
+					if (floor(image_index) >= sprite_get_number(sprite_index) - 5) and player_animation_owner.player_sword_combo_is_being_executed {
+						image_index = sprite_get_number(sprite_index) - 5; // Hold pre combo frame
+						
+						with player_animation_owner {
+							player_sword_combo_timer--;
+							
+							if player_sword_combo_timer <= 0 {
+								other.image_index = sprite_get_number(image_index) - 2; // Hold second attack frame
+								
+								if player_sword_hitbox == -1 { // Generate sword hitbox if it doesn't exists
+									player_sword_hitbox = instance_create_layer(x + (sign(other.image_xscale) * 22), y, "Collision_Layer", obj_player_sword_hitbox);
+									player_sword_hitbox.sword_hitbox_owner = id;
+									
+									player_horizontal_speed += sign(other.image_xscale) * player_base_speed;
+								}
+								
+								if player_sword_hitbox != -1 and instance_exists(player_sword_hitbox) { // Handle combo finish when hitbox is already generated
+									if player_sword_combo_timer <= -15 {
+										player_current_state = player_last_state;
+										player_last_state = player_states.attack;
+								
+										player_sword_combo_timer = player_sword_combo_max_timer;
+										player_sword_combo_is_being_executed = false;
+									}
+								}
+							}
+						}
+					}
+					
+					// Handle robot samurai first attack
+					if (floor(image_index) >= sprite_get_number(sprite_index) - 4) and !player_animation_owner.player_sword_combo_is_being_executed {
+						image_index = sprite_get_number(sprite_index) - 4; // Hold first attack frame
+						
+						with player_animation_owner {
+							if player_sword_hitbox == -1 { // Generate sword hitbox if it doesn't exists
+								player_sword_hitbox = instance_create_layer(x + (sign(other.image_xscale) * 22), y, "Collision_Layer", obj_player_sword_hitbox);
+								player_sword_hitbox.sword_hitbox_owner = id;
+							}
+							
+							player_sword_combo_timer--;
+							
+							// Normalize attack if player doesn't execute the combo in time
+							if player_sword_combo_timer <= 0 {
+								player_current_state = player_last_state;
+								player_last_state = player_states.attack;
+								
+								player_sword_combo_timer = player_sword_combo_max_timer;
+								player_sword_combo_is_being_executed = false;
+							}
+							
+							// Check for player combo input
+							var combo_button_is_pressed = false;
+							switch player_buttons_identifier {
+								case buttons_identifier.left_group:
+									if obj_game_buttons_controller.buttons_leftgroup_attack_key_input {
+										combo_button_is_pressed = true;
+									}
+									break;
+								case buttons_identifier.right_group:
+									if obj_game_buttons_controller.buttons_rightgroup_attack_key_input {
+										combo_button_is_pressed = true;
+									}
+									break;
+							}
+							// Execute combo with time gap for better feeling
+							if (player_sword_combo_timer <= 10) and combo_button_is_pressed {
+								other.image_index = 1;
+								player_sword_combo_is_being_executed = true;
+								player_sword_combo_timer = player_sword_combo_max_timer;
+								instance_destroy(player_sword_hitbox);
+								player_sword_hitbox = -1;
+							}
+						}
+					}
+					
+					break;
+				case player_kind.panda:
+					sprite_index = spr_player_panda_attack;
+					
+					// Generate bullet if panda player shooting animation is on correct frame
+					if (floor(image_index) == sprite_get_number(sprite_index) - 3) and !player_animation_owner.player_bullet_shot_is_executed {
+						// Generate bullet with it's variables
+						var bullet_direction = sign(image_xscale);
+						var bullet = instance_create_layer(x + (10 * bullet_direction), y - 7, "Collision_Layer", obj_player_bullet);
+						bullet.bullet_horizontal_direction = bullet_direction;
+						
+						// Update image frame and set bullet shot variable to avoid bullet duplication
+						image_index++;
+						player_animation_owner.player_bullet_shot_is_executed = true;
+					}
+
+					break;
+			}
+			
+			// Normalize player state if animation finishes
+			if floor(image_index) >= sprite_get_number(sprite_index) - 1 {
+				with player_animation_owner {
+					player_current_state = player_last_state;
+					player_last_state = player_states.attack;
+				}
+			}
 			break;
 		case player_states.talk:
 			break;
 		case player_states.death:
+			switch player_animation_owner.player_type {
+				case player_kind.robot_samurai:
+					sprite_index = spr_player_robot_samurai_death;
+					break;
+				case player_kind.panda:
+					sprite_index = spr_player_panda_death;
+					break;
+			}
+			
+			// Hold last frame for death feeling
+			if floor(image_index) >= sprite_get_number(sprite_index) - 1 {
+				image_index = sprite_get_number(sprite_index) - 1;
+			}
 			break;
 	}
 	

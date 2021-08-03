@@ -3,7 +3,7 @@
 // Only handle player animation if it's owner does exists
 if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 	// Handle image facing based on animation owner horizontal speed
-	if player_animation_owner.player_horizontal_speed != 0 {
+	if player_animation_owner.player_horizontal_speed != 0 and player_animation_owner.player_current_state != player_states.death {
 		if sign(player_animation_owner.player_horizontal_speed) != sign(image_xscale) {
 			image_xscale *= -1;
 		}
@@ -39,36 +39,6 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 			switch player_animation_owner.player_type {
 				case player_kind.robot_samurai:
 					sprite_index = spr_player_robot_samurai_attack;
-					
-					// Handle robot samurai second attack if it's executing the attack combo
-					if (floor(image_index) >= sprite_get_number(sprite_index) - 5) and player_animation_owner.player_sword_combo_is_being_executed {
-						image_index = sprite_get_number(sprite_index) - 5; // Hold pre combo frame
-						
-						with player_animation_owner {
-							player_sword_combo_timer--;
-							
-							if player_sword_combo_timer <= 0 {
-								other.image_index = sprite_get_number(image_index) - 2; // Hold second attack frame
-								
-								if player_sword_hitbox == -1 { // Generate sword hitbox if it doesn't exists
-									player_sword_hitbox = instance_create_layer(x + (sign(other.image_xscale) * 22), y, "Collision_Layer", obj_player_sword_hitbox);
-									player_sword_hitbox.sword_hitbox_owner = id;
-									
-									player_horizontal_speed += sign(other.image_xscale) * player_base_speed;
-								}
-								
-								if player_sword_hitbox != -1 and instance_exists(player_sword_hitbox) { // Handle combo finish when hitbox is already generated
-									if player_sword_combo_timer <= -15 {
-										player_current_state = player_last_state;
-										player_last_state = player_states.attack;
-								
-										player_sword_combo_timer = player_sword_combo_max_timer;
-										player_sword_combo_is_being_executed = false;
-									}
-								}
-							}
-						}
-					}
 					
 					// Handle robot samurai first attack
 					if (floor(image_index) >= sprite_get_number(sprite_index) - 4) and !player_animation_owner.player_sword_combo_is_being_executed {
@@ -116,6 +86,36 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 						}
 					}
 					
+					// Handle robot samurai second attack if it's executing the attack combo
+					if (floor(image_index) >= sprite_get_number(sprite_index) - 5) and player_animation_owner.player_sword_combo_is_being_executed {
+						image_index = sprite_get_number(sprite_index) - 5; // Hold pre combo frame
+						
+						with player_animation_owner {
+							player_sword_combo_timer--;
+							
+							if player_sword_combo_timer <= 0 {
+								other.image_index = sprite_get_number(image_index) - 2; // Hold second attack frame
+								
+								if player_sword_hitbox == -1 { // Generate sword hitbox if it doesn't exists
+									player_sword_hitbox = instance_create_layer(x + (sign(other.image_xscale) * 22), y, "Collision_Layer", obj_player_sword_hitbox);
+									player_sword_hitbox.sword_hitbox_owner = id;
+									
+									player_horizontal_speed += sign(other.image_xscale) * player_base_speed;
+								}
+								
+								if player_sword_hitbox != -1 and instance_exists(player_sword_hitbox) { // Handle combo finish when hitbox is already generated
+									if player_sword_combo_timer <= -15 {
+										player_current_state = player_last_state;
+										player_last_state = player_states.attack;
+								
+										player_sword_combo_timer = player_sword_combo_max_timer;
+										player_sword_combo_is_being_executed = false;
+									}
+								}
+							}
+						}
+					}
+					
 					break;
 				case player_kind.panda:
 					sprite_index = spr_player_panda_attack;
@@ -158,6 +158,16 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 			// Hold last frame for death feeling
 			if floor(image_index) >= sprite_get_number(sprite_index) - 1 {
 				image_index = sprite_get_number(sprite_index) - 1;
+				// Handle player respawn based on number of lives
+				// PLAYER DELETION LOGIC WHEN LOSE ALL LIFES
+				/*obj_game_camera_controller.camera_split_views_are_combining = true;
+				if global.camera_view_targets[0] == player_animation_owner {
+					global.camera_view_targets[0] = noone;
+				}
+				if global.camera_view_targets[1] == player_animation_owner {
+					global.camera_view_targets[1] = noone;
+				}
+				instance_destroy(player_animation_owner);*/
 			}
 			break;
 	}

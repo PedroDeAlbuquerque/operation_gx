@@ -17,6 +17,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 					sprite_index = spr_enemy_ufo_striker_idle;
 					break;
 				case enemy_kind.ufo_shooter:
+					sprite_index = spr_enemy_ufo_shooter_idle;
 					break;
 				case enemy_kind.ufo_hybrid:
 					break;
@@ -29,6 +30,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 					sprite_index = spr_enemy_ufo_striker_sprint;
 					break;
 				case enemy_kind.ufo_shooter:
+					sprite_index = spr_enemy_ufo_shooter_sprint;
 					break;
 				case enemy_kind.ufo_hybrid:
 					break;
@@ -52,6 +54,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 					
 					break;
 				case enemy_kind.ufo_shooter:
+					sprite_index = spr_enemy_ufo_shooter_attack;
 					break;
 				case enemy_kind.ufo_hybrid:
 					break;
@@ -70,6 +73,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 					sprite_index = spr_enemy_ufo_striker_death;
 					break;
 				case enemy_kind.ufo_shooter:
+					sprite_index = spr_enemy_ufo_shooter_death;
 					break;
 				case enemy_kind.ufo_hybrid:
 					break;

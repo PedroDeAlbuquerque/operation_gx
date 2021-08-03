@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8a366be1-e5f6-4335-b691-f3e2fc893f19","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8a366be1-e5f6-4335-b691-f3e2fc893f19","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"LayerId":{"name":"3de408f6-fc51-43a6-809b-7c85ca82a99f","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_enemy_ufo_striker_idle","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","name":"8a366be1-e5f6-4335-b691-f3e2fc893f19","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c25eb6d4-ca0a-48bd-9d0f-8b28a81dbc32","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c25eb6d4-ca0a-48bd-9d0f-8b28a81dbc32","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"LayerId":{"name":"3de408f6-fc51-43a6-809b-7c85ca82a99f","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_enemy_ufo_striker_idle","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","name":"c25eb6d4-ca0a-48bd-9d0f-8b28a81dbc32","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"97392f65-76f0-4d8b-a13c-8c78e7dc9014","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"97392f65-76f0-4d8b-a13c-8c78e7dc9014","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"LayerId":{"name":"fa3c7748-3649-4eb4-8ec1-b40f7ac81557","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_enemy_ufo_striker_idle","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","name":"97392f65-76f0-4d8b-a13c-8c78e7dc9014","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"88ed49fe-173f-41c8-a5ca-2a7e9d4b698d","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"88ed49fe-173f-41c8-a5ca-2a7e9d4b698d","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"LayerId":{"name":"fa3c7748-3649-4eb4-8ec1-b40f7ac81557","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_enemy_ufo_striker_idle","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","name":"88ed49fe-173f-41c8-a5ca-2a7e9d4b698d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_enemy_ufo_striker_idle","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"de16950d-a730-427e-93e7-7a4afad8be5c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8a366be1-e5f6-4335-b691-f3e2fc893f19","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"82e49f11-00d8-459c-9507-19e054c21a7c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c25eb6d4-ca0a-48bd-9d0f-8b28a81dbc32","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a7ee2276-288c-4619-9de6-b576a4ffd9dc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97392f65-76f0-4d8b-a13c-8c78e7dc9014","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"29d5012e-86bc-4526-aed2-03cc027f94a4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88ed49fe-173f-41c8-a5ca-2a7e9d4b698d","path":"sprites/spr_enemy_ufo_striker_idle/spr_enemy_ufo_striker_idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3de408f6-fc51-43a6-809b-7c85ca82a99f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fa3c7748-3649-4eb4-8ec1-b40f7ac81557","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

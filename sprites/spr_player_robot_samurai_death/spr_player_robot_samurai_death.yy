@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 34,
+  "bbox_right": 39,
   "bbox_top": 0,
   "bbox_bottom": 33,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 49,
+  "width": 63,
   "height": 35,
   "textureGroupId": {
     "name": "Default",
@@ -24,27 +24,27 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fdaf9e8a-d684-46d7-88e4-1a614a33d162","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fdaf9e8a-d684-46d7-88e4-1a614a33d162","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"d6cc0ac0-66ac-4ca8-b513-89ab42659ace","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"fdaf9e8a-d684-46d7-88e4-1a614a33d162","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"85e475f4-380f-4c35-ac10-c7255d4fff86","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"85e475f4-380f-4c35-ac10-c7255d4fff86","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"d6cc0ac0-66ac-4ca8-b513-89ab42659ace","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"85e475f4-380f-4c35-ac10-c7255d4fff86","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5f564e35-b5b9-4092-9a2e-fd2ac5f640fa","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5f564e35-b5b9-4092-9a2e-fd2ac5f640fa","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"d6cc0ac0-66ac-4ca8-b513-89ab42659ace","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"5f564e35-b5b9-4092-9a2e-fd2ac5f640fa","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f218310e-00ef-4922-80d4-57b93c42e1b9","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f218310e-00ef-4922-80d4-57b93c42e1b9","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"d6cc0ac0-66ac-4ca8-b513-89ab42659ace","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"f218310e-00ef-4922-80d4-57b93c42e1b9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"56f4777d-07bd-41b3-a40d-71b60aec94ed","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"56f4777d-07bd-41b3-a40d-71b60aec94ed","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"d6cc0ac0-66ac-4ca8-b513-89ab42659ace","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"56f4777d-07bd-41b3-a40d-71b60aec94ed","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fbc1f9a2-d4fe-4f77-8199-f4ad9bceca58","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fbc1f9a2-d4fe-4f77-8199-f4ad9bceca58","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"d6cc0ac0-66ac-4ca8-b513-89ab42659ace","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"fbc1f9a2-d4fe-4f77-8199-f4ad9bceca58","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5e5e450b-2daf-4a0e-ad9f-8c5c765a5895","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e5e450b-2daf-4a0e-ad9f-8c5c765a5895","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"d6cc0ac0-66ac-4ca8-b513-89ab42659ace","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"5e5e450b-2daf-4a0e-ad9f-8c5c765a5895","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ca9dd5e3-4d55-4cd3-a0f2-6e098f3c6e53","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ca9dd5e3-4d55-4cd3-a0f2-6e098f3c6e53","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"5b39dad5-cd4f-484f-909a-0ffb86f2bb00","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"ca9dd5e3-4d55-4cd3-a0f2-6e098f3c6e53","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c5bd1639-1a0b-46e1-8880-c707720cd85c","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c5bd1639-1a0b-46e1-8880-c707720cd85c","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"5b39dad5-cd4f-484f-909a-0ffb86f2bb00","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"c5bd1639-1a0b-46e1-8880-c707720cd85c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"96e41759-d2dc-4b1f-9293-6b7c4f8f9df1","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"96e41759-d2dc-4b1f-9293-6b7c4f8f9df1","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"5b39dad5-cd4f-484f-909a-0ffb86f2bb00","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"96e41759-d2dc-4b1f-9293-6b7c4f8f9df1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"54b96834-e273-4c93-8871-c27020d2421e","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"54b96834-e273-4c93-8871-c27020d2421e","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"5b39dad5-cd4f-484f-909a-0ffb86f2bb00","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"54b96834-e273-4c93-8871-c27020d2421e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0dea3174-51ac-41b4-b19a-702145bdd367","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0dea3174-51ac-41b4-b19a-702145bdd367","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"5b39dad5-cd4f-484f-909a-0ffb86f2bb00","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"0dea3174-51ac-41b4-b19a-702145bdd367","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"16769432-f8ca-48ed-b9d3-63b43f7e0073","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"16769432-f8ca-48ed-b9d3-63b43f7e0073","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"5b39dad5-cd4f-484f-909a-0ffb86f2bb00","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"16769432-f8ca-48ed-b9d3-63b43f7e0073","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5ea9d900-d1da-4244-8e1d-8013311abb0a","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5ea9d900-d1da-4244-8e1d-8013311abb0a","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"LayerId":{"name":"5b39dad5-cd4f-484f-909a-0ffb86f2bb00","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","name":"5ea9d900-d1da-4244-8e1d-8013311abb0a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},
@@ -59,13 +59,13 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3bfc76aa-1e48-493c-9585-896cdd041657","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fdaf9e8a-d684-46d7-88e4-1a614a33d162","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"99df6b71-98c4-4d57-86c0-bbf0a9710d0d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85e475f4-380f-4c35-ac10-c7255d4fff86","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"209a8313-8220-4b76-8681-3dc700820ea2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5f564e35-b5b9-4092-9a2e-fd2ac5f640fa","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"3f64c457-2835-413a-a83e-37ba2f884ba9","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f218310e-00ef-4922-80d4-57b93c42e1b9","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"32e5e575-ffb5-4aed-bb1e-0d62609c75de","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"56f4777d-07bd-41b3-a40d-71b60aec94ed","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"72b7d680-9d1b-459e-9950-fe2ba5199ec4","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fbc1f9a2-d4fe-4f77-8199-f4ad9bceca58","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"6fc448a4-1b71-419e-b89d-4d485418d471","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e5e450b-2daf-4a0e-ad9f-8c5c765a5895","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"846aa733-0311-47f5-821d-539e6ffdc61f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca9dd5e3-4d55-4cd3-a0f2-6e098f3c6e53","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a44b9016-46f7-45b7-9ca6-f7a99e0ee1bb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c5bd1639-1a0b-46e1-8880-c707720cd85c","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fd216185-5671-4891-80ed-431202be7c06","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"96e41759-d2dc-4b1f-9293-6b7c4f8f9df1","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cbadd0c7-c482-4852-8401-f0fccbfb3e8b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"54b96834-e273-4c93-8871-c27020d2421e","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b1d4c351-89f7-4d20-99a4-78f7ed263652","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0dea3174-51ac-41b4-b19a-702145bdd367","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ea72a094-943f-45f7-a0b9-ae78731e4f7d","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"16769432-f8ca-48ed-b9d3-63b43f7e0073","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4ab98aee-7950-4617-ac93-cb2e8d30d179","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5ea9d900-d1da-4244-8e1d-8013311abb0a","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -78,7 +78,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 24,
+    "xorigin": 31,
     "yorigin": 17,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -89,7 +89,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d6cc0ac0-66ac-4ca8-b513-89ab42659ace","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5b39dad5-cd4f-484f-909a-0ffb86f2bb00","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

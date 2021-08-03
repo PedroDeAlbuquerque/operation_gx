@@ -77,7 +77,7 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 							}
 							// Execute combo with time gap for better feeling
 							if (player_sword_combo_timer <= 10) and combo_button_is_pressed {
-								other.image_index = 1;
+								other.image_index = 0;
 								player_sword_combo_is_being_executed = true;
 								player_sword_combo_timer = player_sword_combo_max_timer;
 								instance_destroy(player_sword_hitbox);
@@ -87,8 +87,8 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 					}
 					
 					// Handle robot samurai second attack if it's executing the attack combo
-					if (floor(image_index) >= sprite_get_number(sprite_index) - 5) and player_animation_owner.player_sword_combo_is_being_executed {
-						image_index = sprite_get_number(sprite_index) - 5; // Hold pre combo frame
+					if (floor(image_index) >= sprite_get_number(sprite_index) - 6) and player_animation_owner.player_sword_combo_is_being_executed {
+						image_index = sprite_get_number(sprite_index) - 6; // Hold pre combo frame
 						
 						with player_animation_owner {
 							player_sword_combo_timer--;

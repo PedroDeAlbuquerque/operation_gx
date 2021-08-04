@@ -11,6 +11,16 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 	
 	// Handle player animation based on player current state and type/kind
 	switch player_animation_owner.player_current_state {
+		case player_states.spawn:
+			switch player_animation_owner.player_type {
+				case player_kind.robot_samurai:
+					sprite_index = spr_player_robot_samurai_spawn;
+					break;
+				case player_kind.panda:
+					sprite_index = spr_player_panda_spawn;
+					break;
+			}
+			break;
 		case player_states.idle:
 			switch player_animation_owner.player_type {
 				case player_kind.robot_samurai:
@@ -159,15 +169,28 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 			if floor(image_index) >= sprite_get_number(sprite_index) - 1 {
 				image_index = sprite_get_number(sprite_index) - 1;
 				// Handle player respawn based on number of lives
-				// PLAYER DELETION LOGIC WHEN LOSE ALL LIFES
-				/*obj_game_camera_controller.camera_split_views_are_combining = true;
-				if global.camera_view_targets[0] == player_animation_owner {
-					global.camera_view_targets[0] = noone;
+				player_animation_owner.player_lives--; // Decrease player lives
+				if player_animation_owner.player_lives <= 0 { // Remove player if lives are decreased enough
+					obj_game_camera_controller.camera_split_views_are_combining = true;
+					if global.camera_view_targets[0] == player_animation_owner {
+						global.camera_view_targets[0] = noone;
+					}
+					if global.camera_view_targets[1] == player_animation_owner {
+						global.camera_view_targets[1] = noone;
+					}
+					instance_destroy(player_animation_owner);
+					
+					// Handle highscore showing and gameover here
+				} else { // Respawn player if it still have more lives
+					with player_animation_owner {
+						player_horizontal_speed = 0;
+						player_vertical_speed = 0;
+						x = player_respawn_x;
+						y = player_respawn_y;
+						player_current_state = player_states.spawn;
+						player_last_state = player_current_state;
+					}
 				}
-				if global.camera_view_targets[1] == player_animation_owner {
-					global.camera_view_targets[1] = noone;
-				}
-				instance_destroy(player_animation_owner);*/
 			}
 			break;
 	}

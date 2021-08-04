@@ -1,5 +1,12 @@
 /// @description Initialize the player object
 
+// Variable to handle the player lives and respawn point
+player_lives = 3;
+player_respawn_x = x;
+player_respawn_y = y;
+player_respawn_max_timer = 60;
+player_respawn_timer = player_respawn_max_timer;
+
 // Variable to store the player gamepad type
 player_buttons_identifier = -1;
 

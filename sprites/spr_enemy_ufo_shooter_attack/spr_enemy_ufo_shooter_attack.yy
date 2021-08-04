@@ -30,6 +30,9 @@
     {"compositeImage":{"FrameId":{"name":"845e7e11-ed6f-45d6-9f95-401ef47574f2","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"845e7e11-ed6f-45d6-9f95-401ef47574f2","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"LayerId":{"name":"1f918f0a-9413-4cac-8e25-3187996ba4c8","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_enemy_ufo_shooter_attack","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"resourceVersion":"1.0","name":"845e7e11-ed6f-45d6-9f95-401ef47574f2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"325f5a48-dc76-493a-ab90-8a975a3d3840","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"325f5a48-dc76-493a-ab90-8a975a3d3840","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"LayerId":{"name":"1f918f0a-9413-4cac-8e25-3187996ba4c8","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_enemy_ufo_shooter_attack","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"resourceVersion":"1.0","name":"325f5a48-dc76-493a-ab90-8a975a3d3840","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_enemy_ufo_shooter_attack","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},
@@ -39,13 +42,14 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 2.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"78b7746e-e27e-46cf-8e91-3c902c2f76a9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"94c0ac12-55f9-4000-a26b-09c8abc451df","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a48da10e-6df7-4790-bbfb-eb9dc1571e94","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"845e7e11-ed6f-45d6-9f95-401ef47574f2","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"099ddfd7-a39a-4100-b653-baab545d26ed","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"325f5a48-dc76-493a-ab90-8a975a3d3840","path":"sprites/spr_enemy_ufo_shooter_attack/spr_enemy_ufo_shooter_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,

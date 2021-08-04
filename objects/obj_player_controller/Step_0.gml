@@ -2,6 +2,13 @@
 
 // Handle player action based on player current state
 switch player_current_state {
+	case player_states.spawn:
+		player_respawn_timer--;
+		if player_respawn_timer <= 0 {
+			player_current_state = player_states.idle;
+			player_last_state = player_current_state;
+		}
+		break;
 	case player_states.idle:
 		if player_horizontal_speed != 0 or player_vertical_speed != 0 {
 			player_last_state = player_current_state;
@@ -26,7 +33,11 @@ switch player_current_state {
 		break;
 }
 
-if player_current_state != player_states.death { // Only handle logic based on input if player is alive
+if player_current_state != player_states.spawn {
+	player_respawn_timer = player_respawn_max_timer;
+}
+
+if player_current_state != player_states.death and player_current_state != player_states.spawn { // Only handle logic based on input if player is alive
 	// Handle player attack input
 	if player_current_state != player_states.attack { // Only check for player attack input if player is not attacking
 		scr_player_check_attack_input_based_on_kind();

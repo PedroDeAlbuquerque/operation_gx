@@ -1,5 +1,21 @@
 /// @description Handle the enemy object update
 
+// Handle the collision box size based on enemy kind
+switch enemy_type {
+	case enemy_kind.ufo_striker:
+		image_xscale = 1;
+		image_yscale = 1;
+		break;
+	case enemy_kind.ufo_shooter:
+		image_xscale = .5;
+		image_yscale = .5;
+		break;
+	case enemy_kind.ufo_hybrid:
+		image_xscale = 1.2;
+		image_yscale = 1.2;
+		break;
+}
+
 // Handle enemy action based on current enemy state and behavior
 switch enemy_current_state {
 	case enemy_states.idle:
@@ -39,29 +55,7 @@ scr_enemy_aggressiveness_trigger(distance_to_trigger_aggressiveness);
 
 // Handle enemy movement, attack and collision based on horizontal and vertical speed and enemy type
 if enemy_current_state != enemy_states.death {
-	switch enemy_type {
-		case enemy_kind.ufo_striker:
-			if enemy_target_player != -1 {
-				if enemy_current_state != enemy_states.attack {
-					if (distance_to_object(enemy_target_player) <= 15) and ((y + 15) > enemy_target_player.y) and ((y - 15) < enemy_target_player.y) {
-						enemy_last_state = enemy_current_state;
-						enemy_current_state = enemy_states.attack;
-					} else {
-						var target_direction = point_direction(x, y, enemy_target_player.x, enemy_target_player.y);
-						enemy_horizontal_speed = lengthdir_x(enemy_base_speed, target_direction);
-						enemy_vertical_speed = lengthdir_y(enemy_base_speed, target_direction);
-					}
-				}
-			} else {
-				enemy_horizontal_speed = 0;
-				enemy_vertical_speed = 0;
-			}
-			break;
-		case enemy_kind.ufo_shooter:
-			break;
-		case enemy_kind.ufo_hybrid:
-			break;
-	}
+	scr_enemy_action_controller(distance_to_trigger_aggressiveness);
 }
 
 repeat(abs(enemy_horizontal_speed)) {

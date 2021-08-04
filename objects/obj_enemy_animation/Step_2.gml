@@ -20,6 +20,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 					sprite_index = spr_enemy_ufo_shooter_idle;
 					break;
 				case enemy_kind.ufo_hybrid:
+					sprite_index = spr_enemy_ufo_hybrid_idle;
 					break;
 			}
 
@@ -33,6 +34,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 					sprite_index = spr_enemy_ufo_shooter_sprint;
 					break;
 				case enemy_kind.ufo_hybrid:
+					sprite_index = spr_enemy_ufo_hybrid_sprint;
 					break;
 			}
 
@@ -55,8 +57,68 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 					break;
 				case enemy_kind.ufo_shooter:
 					sprite_index = spr_enemy_ufo_shooter_attack;
+					
+					// Set animation correct direction before executing the laser shot
+					var target = enemy_animation_owner.enemy_target_player;
+					if target != -1 and instance_exists(target) {
+						if target.x >= enemy_animation_owner.x {
+							image_xscale = 1;
+						} else {
+							image_xscale = -1;
+						}
+					}
+					
+					// Generate laser if ufo shooter animation is on correct frame
+					if (floor(image_index) == sprite_get_number(sprite_index) - 2) and !enemy_animation_owner.enemy_laser_shot_is_executed {
+						// Generate laser with it's variables
+						var laser_direction = sign(image_xscale);
+						var laser = instance_create_layer(x + (10 * laser_direction), y, "Collision_Layer", obj_enemy_laser);
+						laser.laser_horizontal_direction = laser_direction;
+						
+						// Update image frame and set laser shot variable to avoid laser duplication
+						image_index++;
+						enemy_animation_owner.enemy_laser_shot_is_executed = true;
+					}
+					
 					break;
 				case enemy_kind.ufo_hybrid:
+					if !enemy_animation_owner.enemy_hybrid_is_shooting {
+						sprite_index = spr_enemy_ufo_hybrid_attack_one;
+					
+						// Generate strike hitbox if it doesn't exists
+						if (floor(image_index) >= sprite_get_number(sprite_index) - 2) and (enemy_animation_current_sprite == enemy_animation_last_sprite) {
+							with enemy_animation_owner {
+								if enemy_strike_hitbox == -1 {
+									enemy_strike_hitbox = instance_create_layer(x + (sign(other.image_xscale) * 10), y + 19, "Collision_Layer", obj_enemy_strike_hitbox);
+									enemy_strike_hitbox.strike_hitbox_owner = id;
+								}
+							}
+						}
+					} else {
+						sprite_index = spr_enemy_ufo_hybrid_attack_two;
+						
+						// Set animation correct direction before executing the laser shot
+						var target = enemy_animation_owner.enemy_target_player;
+						if target != -1 and instance_exists(target) {
+							if target.x >= enemy_animation_owner.x {
+								image_xscale = 1;
+							} else {
+								image_xscale = -1;
+							}
+						}
+					
+						// Generate laser if ufo hybrid animation is on correct frame
+						if (floor(image_index) == sprite_get_number(sprite_index) - 2) and !enemy_animation_owner.enemy_laser_shot_is_executed {
+							// Generate laser with it's variables
+							var laser_direction = sign(image_xscale);
+							var laser = instance_create_layer(x + (10 * laser_direction), y - 12, "Collision_Layer", obj_enemy_laser);
+							laser.laser_horizontal_direction = laser_direction;
+						
+							// Update image frame and set laser shot variable to avoid laser duplication
+							image_index++;
+							enemy_animation_owner.enemy_laser_shot_is_executed = true;
+						}
+					}
 					break;
 			}
 			
@@ -64,6 +126,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 			if floor(image_index) >= sprite_get_number(sprite_index) - 1 {
 				enemy_animation_owner.enemy_current_state = enemy_animation_owner.enemy_last_state;
 				enemy_animation_owner.enemy_last_state = enemy_states.attack;
+				enemy_animation_owner.enemy_hybrid_is_shooting = choose(true, false); // Choose attack kind for hybrid enemy dynamic
 			}
 			
 			break;
@@ -76,6 +139,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 					sprite_index = spr_enemy_ufo_shooter_death;
 					break;
 				case enemy_kind.ufo_hybrid:
+					sprite_index = spr_enemy_ufo_hybrid_death;
 					break;
 			}
 			

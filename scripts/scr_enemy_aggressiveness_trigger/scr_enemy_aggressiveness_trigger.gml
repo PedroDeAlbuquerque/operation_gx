@@ -5,7 +5,7 @@ function scr_enemy_aggressiveness_trigger(argument0){
 	var min_distance_to_trigger_aggressiveness = argument0;
 	if possible_player_target != noone {
 		// Check if possible target is within range and is alive to set it as target
-		if (distance_to_object(possible_player_target) <= min_distance_to_trigger_aggressiveness) and (possible_player_target.player_current_state != player_states.death) {
+		if (distance_to_object(possible_player_target) <= min_distance_to_trigger_aggressiveness) and (possible_player_target.player_current_state != player_states.death) and (possible_player_target.player_current_state != player_states.spawn) {
 			enemy_target_player_delay--;
 			
 			if enemy_target_player_delay <= 0 {

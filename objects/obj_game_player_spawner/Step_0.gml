@@ -1,9 +1,9 @@
 /// @description Handle the player spawn object update
 
-if room == rm_game_test { // Only handle player spawner if it's on main game room
+if room == rm_main { // Only handle player spawner if it's on main game room
 	var player_one_target = global.camera_view_targets[0];
 
-	if player_spawner_first_button_group != -1 and player_spawner_first_character != -1 {
+	if player_spawner_first_button_group != -1 and player_spawner_first_character != -1 and !global.gameover_on_player_one {
 		if player_one_target == noone { // Generate first player if it doesn't exists
 			var player_one = instance_create_layer(200, 100, "Collision_Layer", obj_player_controller);
 			player_one.player_type = player_spawner_first_character;
@@ -16,11 +16,12 @@ if room == rm_game_test { // Only handle player spawner if it's on main game roo
 				global.gamepad_one_buttons_group = buttons_identifier.right_group;
 				global.gamepad_two_buttons_group = buttons_identifier.left_group;
 			}
+			player_one.player_is_player_one = true; // Set that player is player one
 		}
 	}
 
 	// Summon second player if it's not already summoned
-	if global.camera_view_targets[1] == noone and player_one_target != noone {
+	if global.camera_view_targets[1] == noone and player_one_target != noone and !global.gameover_on_player_two {
 		if player_one_target.player_buttons_identifier == buttons_identifier.left_group and obj_game_buttons_controller.buttons_rightgroup_dashtalk_key_input {
 			var player_two = instance_create_layer(250, 100, "Collision_Layer", obj_player_controller);
 			switch player_one_target.player_type {

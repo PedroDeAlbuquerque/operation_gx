@@ -182,6 +182,11 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 					instance_destroy(player_animation_owner);
 					
 					// Handle highscore showing and gameover here
+					if player_animation_owner.player_is_player_one {
+						global.gameover_on_player_one = true;
+					} else {
+						global.gameover_on_player_two = true;
+					}
 				} else { // Respawn player if it still have more lives
 					with player_animation_owner {
 						player_horizontal_speed = 0;

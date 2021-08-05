@@ -29,4 +29,8 @@ global.highscore_player_one = 0;
 global.highscore_player_two = 0;
 global.highscore_show_two_players = false;
 
+// Game over related globals
+global.gameover_on_player_one = false;
+global.gameover_on_player_two = false;
+
 room_goto_next();

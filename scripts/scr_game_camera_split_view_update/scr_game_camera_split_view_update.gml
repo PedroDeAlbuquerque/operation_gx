@@ -19,6 +19,10 @@ function scr_game_camera_split_view_update(){
 	if left_view_target != noone and instance_exists(left_view_target) { // Only handle left camera view if player one exists
 		var current_camera = view_camera[1]; // Store player one current camera
 		
+		// Set shader view variables based on player target
+		global.shader_left_view_flash = left_view_target.player_screen_flash;
+		global.shader_left_view_chromatic_aberration = left_view_target.player_screen_chromatic_aberration;
+		
 		// Set camera positioning based on player
 		var camera_x = left_view_target.x - camera_get_view_width(current_camera) * .5;
 		var camera_y = left_view_target.y - camera_get_view_height(current_camera) * .5;
@@ -37,6 +41,10 @@ function scr_game_camera_split_view_update(){
 	}
 	if right_view_target != noone and instance_exists(right_view_target) { // Only handle left camera view if player two exists
 		var current_camera = view_camera[2]; // Store player two current camera
+		
+		// Set shader view variables based on player target
+		global.shader_right_view_flash = right_view_target.player_screen_flash;
+		global.shader_right_view_chromatic_aberration = right_view_target.player_screen_chromatic_aberration;
 		
 		// Set camera positioning based on player
 		var camera_x = right_view_target.x - camera_get_view_width(current_camera) * .5;

@@ -17,3 +17,17 @@ if (
 		player_two_target.player_animation.layer = top_animation_layer;
 	}
 }
+
+// Normalize player shader variables
+if player_screen_flash != 0 {
+	if player_screen_flash < 0 {
+		player_screen_flash += .05;
+		player_screen_flash = clamp(player_screen_flash, -1, 0);
+	}
+	if player_screen_flash > 0 {
+		player_screen_flash -= .05;
+		player_screen_flash = clamp(player_screen_flash, 0, 1);
+	}
+}
+player_screen_chromatic_aberration -= .05;
+player_screen_chromatic_aberration = clamp(player_screen_chromatic_aberration, 0, 1);

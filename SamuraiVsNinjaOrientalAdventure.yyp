@@ -1,7 +1,7 @@
 {
   "resources": [
     {"id":{"name":"obj_game_title_screen_controller","path":"objects/obj_game_title_screen_controller/obj_game_title_screen_controller.yy",},"order":7,},
-    {"id":{"name":"obj_game_init","path":"objects/obj_game_init/obj_game_init.yy",},"order":0,},
+    {"id":{"name":"obj_game_controller","path":"objects/obj_game_controller/obj_game_controller.yy",},"order":0,},
     {"id":{"name":"spr_enemy_ufo_hybrid_sprint","path":"sprites/spr_enemy_ufo_hybrid_sprint/spr_enemy_ufo_hybrid_sprint.yy",},"order":3,},
     {"id":{"name":"obj_player_controller","path":"objects/obj_player_controller/obj_player_controller.yy",},"order":0,},
     {"id":{"name":"spr_player_robot_samurai_death","path":"sprites/spr_player_robot_samurai_death/spr_player_robot_samurai_death.yy",},"order":5,},
@@ -34,8 +34,9 @@
     {"id":{"name":"spr_player_robot_samurai_spawn","path":"sprites/spr_player_robot_samurai_spawn/spr_player_robot_samurai_spawn.yy",},"order":6,},
     {"id":{"name":"scr_enemy_states_initialize","path":"scripts/scr_enemy_states_initialize/scr_enemy_states_initialize.yy",},"order":2,},
     {"id":{"name":"spr_enemy_ufo_shooter_idle","path":"sprites/spr_enemy_ufo_shooter_idle/spr_enemy_ufo_shooter_idle.yy",},"order":0,},
-    {"id":{"name":"rm_game_test","path":"rooms/rm_game_test/rm_game_test.yy",},"order":1,},
+    {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":1,},
     {"id":{"name":"spr_player_bullet","path":"sprites/spr_player_bullet/spr_player_bullet.yy",},"order":6,},
+    {"id":{"name":"rm_gameover","path":"rooms/rm_gameover/rm_gameover.yy",},"order":3,},
     {"id":{"name":"spr_player_panda_death","path":"sprites/spr_player_panda_death/spr_player_panda_death.yy",},"order":6,},
     {"id":{"name":"scr_game_camera_split_view_update","path":"scripts/scr_game_camera_split_view_update/scr_game_camera_split_view_update.yy",},"order":1,},
     {"id":{"name":"sh_screen_filter","path":"shaders/sh_screen_filter/sh_screen_filter.yy",},"order":0,},
@@ -92,7 +93,8 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_game_init","path":"rooms/rm_game_init/rm_game_init.yy",},},
     {"roomId":{"name":"rm_title_screen","path":"rooms/rm_title_screen/rm_title_screen.yy",},},
-    {"roomId":{"name":"rm_game_test","path":"rooms/rm_game_test/rm_game_test.yy",},},
+    {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
+    {"roomId":{"name":"rm_gameover","path":"rooms/rm_gameover/rm_gameover.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

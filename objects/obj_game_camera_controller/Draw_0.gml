@@ -1,7 +1,7 @@
 /// @description Handle the highscore drawing
 
 // Set drawing font
-if room == rm_game_test { // Only draw highscore if it's on main game screen
+if room == rm_main { // Only draw highscore if it's on main game screen
 	draw_set_font(fnt_main_text);
 
 	// Handle highscore drawing based on current view and number of players

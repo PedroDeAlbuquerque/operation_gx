@@ -1,5 +1,22 @@
 /// @description Handle the full view game camera update
 function scr_game_camera_full_view_update(){
+	// Get player targets
+	var player_one_target = global.camera_view_targets[0];
+	var player_two_target = global.camera_view_targets[1];
+	// Set shader variables based on max value
+	if player_one_target != noone {
+		var final_screen_flash = player_one_target.player_screen_flash;
+		var final_chromatic_aberration = player_one_target.player_screen_chromatic_aberration;
+		
+		if player_two_target != noone {
+			final_screen_flash = max(player_one_target.player_screen_flash, player_two_target.player_screen_flash);
+			final_chromatic_aberration = max(player_one_target.player_screen_chromatic_aberration, player_two_target.player_screen_chromatic_aberration);
+		}
+		
+		global.shader_full_view_flash = final_screen_flash;
+		global.shader_full_view_chromatic_aberration = final_chromatic_aberration
+	}
+	
 	// Set camera highscore correctly
 	camera_highscore_left_view = global.highscore_player_one;
 	camera_highscore_right_view = global.highscore_player_two;

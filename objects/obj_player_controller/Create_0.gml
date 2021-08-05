@@ -1,5 +1,12 @@
 /// @description Initialize the player object
 
+// Variable to check if it's player one
+player_is_player_one = false;
+
+// Player shader individual values
+player_screen_flash = 0;
+player_screen_chromatic_aberration = 0;
+
 // Variable to handle the player lives and respawn point
 player_lives = 3;
 player_respawn_x = x;

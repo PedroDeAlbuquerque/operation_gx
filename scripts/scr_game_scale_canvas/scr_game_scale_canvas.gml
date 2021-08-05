@@ -22,5 +22,11 @@ function scr_game_scale_canvas(argument0, argument1, argument2, argument3, argum
 		window_center();
 	}
 	
-	surface_resize(application_surface, min(window_get_width(), base_width), min(window_get_height(), base_height));
+	var final_width = min(window_get_width(), base_width);
+	var final_height = min(window_get_height(), base_height);
+	
+	global.shader_width = final_width;
+	global.shader_height = final_height;
+	
+	surface_resize(application_surface, final_width, final_height);
 }

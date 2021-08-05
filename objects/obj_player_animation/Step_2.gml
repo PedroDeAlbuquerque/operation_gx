@@ -136,6 +136,7 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 						var bullet_direction = sign(image_xscale);
 						var bullet = instance_create_layer(x + (10 * bullet_direction), y - 7, "Collision_Layer", obj_player_bullet);
 						bullet.bullet_horizontal_direction = bullet_direction;
+						bullet.bullet_owner = player_animation_owner.id;
 						
 						// Update image frame and set bullet shot variable to avoid bullet duplication
 						image_index++;

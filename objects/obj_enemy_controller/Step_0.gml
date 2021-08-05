@@ -59,8 +59,18 @@ if enemy_current_state != enemy_states.death {
 }
 
 repeat(abs(enemy_horizontal_speed)) {
-	x += sign(enemy_horizontal_speed);
+	if place_meeting(x + sign(enemy_horizontal_speed), y, obj_scenery_wall) {
+		enemy_horizontal_speed = 0;
+		break;
+	} else {
+		x += sign(enemy_horizontal_speed);
+	}
 }
 repeat(abs(enemy_vertical_speed)) {
-	y += sign(enemy_vertical_speed);
+	if place_meeting(x, y + sign(enemy_vertical_speed), obj_scenery_wall) {
+		enemy_vertical_speed = 0;
+		break;
+	} else {
+		y += sign(enemy_vertical_speed);
+	}
 }

@@ -78,8 +78,18 @@ if player_current_state != player_states.death and player_current_state != playe
 }
 
 repeat(abs(player_horizontal_speed)) {
-	x += sign(player_horizontal_speed);
+	if place_meeting(x + sign(player_horizontal_speed), y, obj_scenery_wall) {
+		player_horizontal_speed = 0;
+		break;
+	} else {
+		x += sign(player_horizontal_speed);
+	}
 }
 repeat(abs(player_vertical_speed)) {
-	y += sign(player_vertical_speed);
+	if place_meeting(x, y + sign(player_vertical_speed), obj_scenery_wall) {
+		player_vertical_speed = 0;
+		break;
+	} else {
+		y += sign(player_vertical_speed);
+	}
 }

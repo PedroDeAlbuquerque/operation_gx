@@ -1,5 +1,9 @@
 /// @description Handle the full view game camera update
 function scr_game_camera_full_view_update(){
+	// Set camera highscore correctly
+	camera_highscore_left_view = global.highscore_player_one;
+	camera_highscore_right_view = global.highscore_player_two;
+	
 	var current_camera = view_camera[view_current]; // Set current camera view
 	var lerp_rate = .2; // Set lerp rate
 	if argument_count > 0 { // Set another camera view and/or lerp rate based on optional arguments

@@ -48,3 +48,7 @@ view_set_camera(2, camera_right_view);
 // Variable to check if camera split view is combining
 camera_split_views_are_combining = false;
 camera_split_views_combining_timer = 0;
+
+// Highscore variables based on views
+camera_highscore_left_view = global.highscore_player_one;
+camera_highscore_right_view = global.highscore_player_two;

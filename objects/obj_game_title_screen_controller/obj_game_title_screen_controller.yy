@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_player_robot_samurai_spawn",
-    "path": "sprites/spr_player_robot_samurai_spawn/spr_player_robot_samurai_spawn.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -21,17 +18,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Objects/player.yy",
+    "name": "game",
+    "path": "folders/Objects/game.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player_animation",
+  "name": "obj_game_title_screen_controller",
   "tags": [],
   "resourceType": "GMObject",
 }

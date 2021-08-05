@@ -7,9 +7,13 @@ function scr_game_camera_split_view_update(){
 	if player_one_target.x < player_two_target.x {
 		left_view_target = player_one_target;
 		right_view_target = player_two_target;
+		camera_highscore_left_view = global.highscore_player_one;
+		camera_highscore_right_view = global.highscore_player_two;
 	} else {
 		left_view_target = player_two_target;
 		right_view_target = player_one_target;
+		camera_highscore_left_view = global.highscore_player_two;
+		camera_highscore_right_view = global.highscore_player_one;
 	}
 	
 	if left_view_target != noone and instance_exists(left_view_target) { // Only handle left camera view if player one exists
@@ -25,7 +29,7 @@ function scr_game_camera_split_view_update(){
 		camera_y = lerp(camera_get_view_y(current_camera), camera_y, camera_lerp_rate);
 		
 		// Limit camera x and y position based on room width and height
-		camera_x = clamp(camera_x, 0, room_width - global.resolution_width);
+		camera_x = clamp(camera_x, 0, room_width - (global.resolution_width / 2));
 		camera_y = clamp(camera_y, 0, room_height - global.resolution_height);
 		
 		// Set camera position
@@ -44,7 +48,7 @@ function scr_game_camera_split_view_update(){
 		camera_y = lerp(camera_get_view_y(current_camera), camera_y, camera_lerp_rate);
 		
 		// Limit camera x and y position based on room width and height
-		camera_x = clamp(camera_x, 0, room_width - global.resolution_width);
+		camera_x = clamp(camera_x, 0, room_width - (global.resolution_width / 2));
 		camera_y = clamp(camera_y, 0, room_height - global.resolution_height);
 		
 		// Set camera position

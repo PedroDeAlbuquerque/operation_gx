@@ -36,6 +36,11 @@ if place_meeting(x, y, obj_player_controller) {
 	instance_destroy();
 }
 
+// Delete laser if it hits wall
+if place_meeting(x, y, obj_scenery_wall) {
+	instance_destroy();
+}
+
 // Delete laser if it's outside room
 if (x < 0 or x > room_width) or (y < 0 or y > room_height) {
 	instance_destroy();

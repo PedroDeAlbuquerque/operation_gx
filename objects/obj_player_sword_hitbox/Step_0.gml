@@ -21,6 +21,27 @@ if place_meeting(x, y, obj_enemy_controller) {
 			
 				// Set enemy animation image xscale
 				current_enemy.enemy_animation.image_xscale = -sign(sword_hitbox_owner.player_animation.image_xscale);
+				
+				// Update player highscore based on player one target
+				var player_one_target = global.camera_view_targets[0];
+				// Enemy score logic based on enemy kind
+				var enemy_score = 50;
+				switch current_enemy.enemy_type {
+					case enemy_kind.ufo_striker:
+						enemy_score = 25;
+						break;
+					case enemy_kind.ufo_shooter:
+						enemy_score = 50;
+						break;
+					case enemy_kind.ufo_hybrid:
+						enemy_score = 100;
+						break;
+				}
+				if player_one_target == sword_hitbox_owner.id {
+					global.highscore_player_one += enemy_score;
+				} else {
+					global.highscore_player_two += enemy_score;
+				}
 			}
 		}
 	}

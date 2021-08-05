@@ -14,7 +14,7 @@ player_buttons_identifier = -1;
 player_type = -1;
 
 // Variables related to the player states
-player_current_state = player_states.idle;
+player_current_state = player_states.spawn;
 player_last_state = player_current_state;
 
 // Movement related variables

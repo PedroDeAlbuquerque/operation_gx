@@ -41,6 +41,9 @@ if camera_split_views_are_combining {
 	camera_set_view_pos(camera_left_view, camera_left_view_x, camera_left_view_y);
 	camera_set_view_pos(camera_right_view, camera_right_view_x, camera_right_view_y);
 	
+	// Decrease screen filter distortion to achieve better feeling when combining views 
+	obj_game_screen_filter.screen_distortion_ammount = lerp(obj_game_screen_filter.screen_distortion_ammount, .075, .05);
+	
 	// Split camera if players diverge
 	if (
 		(global.camera_full_view_bounds[2] - global.camera_full_view_bounds[0]) > (camera_get_view_width(camera_full_view) - camera_split_view_border * border_size) or 
@@ -48,6 +51,7 @@ if camera_split_views_are_combining {
 		) {
 			camera_split_views_are_combining = false;
 			camera_split_views_combining_timer = 0;
+			obj_game_screen_filter.screen_distortion_ammount = .15; // Normalize screen filter distortion
 		}
 	
 	// Check split cameras position before combining them
@@ -62,6 +66,7 @@ if camera_split_views_are_combining {
 	
 		// Set that cameras are not combining anymore
 		camera_split_views_are_combining = false;
+		obj_game_screen_filter.screen_distortion_ammount = .15; // Normalize screen filter distortion
 	}
 	
 	camera_split_views_combining_timer++;
@@ -74,7 +79,7 @@ if camera_split_views_are_combining {
 			view_visible[0] = false;
 			view_visible[1] = true;
 			view_visible[2] = true;
-		
+			
 			var camera_full_view_x = camera_get_view_x(camera_full_view);
 			var camera_full_view_y = camera_get_view_y(camera_full_view);
 		

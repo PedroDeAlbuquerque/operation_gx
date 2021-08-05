@@ -1,7 +1,8 @@
 /// @description Initialize the enemy object
 
 // Variable to store the enemy type
-enemy_type = choose(enemy_kind.ufo_striker, enemy_kind.ufo_shooter, enemy_kind.ufo_hybrid);
+//enemy_type = choose(enemy_kind.ufo_striker, enemy_kind.ufo_shooter, enemy_kind.ufo_hybrid);
+enemy_type = enemy_kind.ufo_striker;
 
 // Variables related to the current enemy state
 enemy_current_state = enemy_states.idle;

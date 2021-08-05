@@ -15,6 +15,12 @@ function scr_game_camera_full_view_update(){
 		
 		global.shader_full_view_flash = final_screen_flash;
 		global.shader_full_view_chromatic_aberration = final_chromatic_aberration
+	} else if player_two_target != noone {
+		var final_screen_flash = player_two_target.player_screen_flash;
+		var final_chromatic_aberration = player_two_target.player_screen_chromatic_aberration;
+		
+		global.shader_full_view_flash = final_screen_flash;
+		global.shader_full_view_chromatic_aberration = final_chromatic_aberration
 	}
 	
 	// Set camera highscore correctly

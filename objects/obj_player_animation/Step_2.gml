@@ -195,6 +195,8 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 						y = player_respawn_y;
 						player_current_state = player_states.spawn;
 						player_last_state = player_current_state;
+						player_screen_flash = -1;
+						player_screen_chromatic_aberration = 1;
 					}
 				}
 			}

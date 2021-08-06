@@ -1,5 +1,7 @@
 /// @description Initialize game
 
+randomize();
+
 // Resolution related globals
 global.resolution_width = 480;
 global.resolution_height = 270;

@@ -10,7 +10,7 @@ if place_meeting(x, y, obj_enemy_controller) {
 			// Handle enemy death
 			var current_enemy = enemy_list[| i]; // Get current enemy being hit by sword
 			
-			if current_enemy.enemy_current_state != enemy_states.death { // Only handle enemy death if it's not already dead
+			if current_enemy.enemy_current_state != enemy_states.death and current_enemy.enemy_current_state != enemy_states.spawn { // Only handle enemy death if it's not already dead
 				// Set enemy to death state
 				current_enemy.enemy_last_state = current_enemy.enemy_current_state;
 				current_enemy.enemy_current_state = enemy_states.death;

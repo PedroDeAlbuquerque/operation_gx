@@ -18,6 +18,13 @@ switch enemy_type {
 
 // Handle enemy action based on current enemy state and behavior
 switch enemy_current_state {
+	case enemy_states.spawn:
+		enemy_spawn_timer--;
+		if enemy_spawn_timer <= 0 {
+			enemy_current_state = enemy_states.idle;
+			enemy_last_state = enemy_current_state;
+		}
+		break;
 	case enemy_states.idle:
 		if enemy_horizontal_speed != 0 or enemy_vertical_speed != 0 {
 			enemy_last_state = enemy_current_state;
@@ -54,7 +61,7 @@ switch enemy_type {
 scr_enemy_aggressiveness_trigger(distance_to_trigger_aggressiveness);
 
 // Handle enemy movement, attack and collision based on horizontal and vertical speed and enemy type
-if enemy_current_state != enemy_states.death {
+if enemy_current_state != enemy_states.death and enemy_current_state != enemy_states.spawn {
 	scr_enemy_action_controller(distance_to_trigger_aggressiveness);
 }
 

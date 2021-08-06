@@ -104,7 +104,7 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 							player_sword_combo_timer--;
 							
 							if player_sword_combo_timer <= 0 {
-								other.image_index = sprite_get_number(image_index) - 2; // Hold second attack frame
+								other.image_index = sprite_get_number(image_index) - 1; // Hold second attack frame
 								
 								if player_sword_hitbox == -1 { // Generate sword hitbox if it doesn't exists
 									player_sword_hitbox = instance_create_layer(x + (sign(other.image_xscale) * 22), y, "Collision_Layer", obj_player_sword_hitbox);

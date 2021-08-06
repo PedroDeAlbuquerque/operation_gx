@@ -11,6 +11,19 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 	
 	// Handle enemy animation based on enemy current state and type/kind
 	switch enemy_animation_owner.enemy_current_state {
+		case enemy_states.spawn:
+			switch enemy_animation_owner.enemy_type {
+				case enemy_kind.ufo_striker:
+					sprite_index = spr_enemy_ufo_striker_spawn;
+					break;
+				case enemy_kind.ufo_shooter:
+					sprite_index = spr_enemy_ufo_shooter_spawn;
+					break;
+				case enemy_kind.ufo_hybrid:
+					sprite_index = spr_enemy_ufo_hybrid_spawn;
+					break;
+			}
+			break;
 		case enemy_states.idle:
 			switch enemy_animation_owner.enemy_type {
 				case enemy_kind.ufo_striker:
@@ -146,7 +159,14 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 			// Hold last frame for death feeling
 			if floor(image_index) >= sprite_get_number(sprite_index) - 1 {
 				// Delete enemy after playing death animation
-				instance_destroy(enemy_animation_owner);
+				with enemy_animation_owner {
+					with enemy_spawner_owner {
+						var dying_enemy_position_on_list = ds_list_find_index(enemy_spawner_generated_enemies_list, other.id);
+						ds_list_delete(enemy_spawner_generated_enemies_list, dying_enemy_position_on_list);
+					}
+					
+					instance_destroy();
+				}
 			}
 			break;
 	}

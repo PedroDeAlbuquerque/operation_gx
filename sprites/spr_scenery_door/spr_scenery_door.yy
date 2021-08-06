@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 1023,
+  "bbox_right": 31,
   "bbox_top": 0,
-  "bbox_bottom": 767,
+  "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 1024,
-  "height": 768,
+  "width": 32,
+  "height": 32,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1025f28c-c789-41fd-9852-644d4e3ef0e8","path":"sprites/spr_bg_test/spr_bg_test.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1025f28c-c789-41fd-9852-644d4e3ef0e8","path":"sprites/spr_bg_test/spr_bg_test.yy",},"LayerId":{"name":"0be772e1-b29b-4693-9302-9bb0ac847484","path":"sprites/spr_bg_test/spr_bg_test.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_bg_test","path":"sprites/spr_bg_test/spr_bg_test.yy",},"resourceVersion":"1.0","name":"1025f28c-c789-41fd-9852-644d4e3ef0e8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c3379d40-c835-41b4-8206-c95d17507c91","path":"sprites/spr_scenery_door/spr_scenery_door.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c3379d40-c835-41b4-8206-c95d17507c91","path":"sprites/spr_scenery_door/spr_scenery_door.yy",},"LayerId":{"name":"0582a648-b233-42f8-ba24-0a986ebb1a6c","path":"sprites/spr_scenery_door/spr_scenery_door.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_scenery_door","path":"sprites/spr_scenery_door/spr_scenery_door.yy",},"resourceVersion":"1.0","name":"c3379d40-c835-41b4-8206-c95d17507c91","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_bg_test","path":"sprites/spr_bg_test/spr_bg_test.yy",},
+    "spriteId": {"name":"spr_scenery_door","path":"sprites/spr_scenery_door/spr_scenery_door.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1a02f8b2-f2cd-4100-881c-158d35ce4db4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1025f28c-c789-41fd-9852-644d4e3ef0e8","path":"sprites/spr_bg_test/spr_bg_test.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2138f93d-0b3f-4efb-bf04-b9b7ba0f7243","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c3379d40-c835-41b4-8206-c95d17507c91","path":"sprites/spr_scenery_door/spr_scenery_door.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_bg_test","path":"sprites/spr_bg_test/spr_bg_test.yy",},
+    "parent": {"name":"spr_scenery_door","path":"sprites/spr_scenery_door/spr_scenery_door.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_bg_test",
+    "name": "spr_scenery_door",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0be772e1-b29b-4693-9302-9bb0ac847484","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0582a648-b233-42f8-ba24-0a986ebb1a6c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "player",
-    "path": "folders/Sprites/player.yy",
+    "name": "scenery",
+    "path": "folders/Sprites/scenery.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_bg_test",
+  "name": "spr_scenery_door",
   "tags": [],
   "resourceType": "GMSprite",
 }

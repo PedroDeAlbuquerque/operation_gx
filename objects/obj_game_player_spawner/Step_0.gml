@@ -5,7 +5,7 @@ if room == rm_main { // Only handle player spawner if it's on main game room
 
 	if player_spawner_first_button_group != -1 and player_spawner_first_character != -1 and !global.gameover_on_player_one {
 		if player_one_target == noone { // Generate first player if it doesn't exists
-			var player_one = instance_create_layer(200, 100, "Collision_Layer", obj_player_controller);
+			var player_one = instance_create_layer(1100, 200, "Collision_Layer", obj_player_controller);
 			player_one.player_type = player_spawner_first_character;
 			player_one.player_buttons_identifier = player_spawner_first_button_group;
 			global.camera_view_targets[0] = player_one.id;

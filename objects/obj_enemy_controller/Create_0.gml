@@ -1,11 +1,16 @@
 /// @description Initialize the enemy object
 
+// Variable to store which spawner generated it
+enemy_spawner_owner = -1;
+
+// Variable to handle the enemy spawn
+enemy_spawn_timer = 30;
+
 // Variable to store the enemy type
-//enemy_type = choose(enemy_kind.ufo_striker, enemy_kind.ufo_shooter, enemy_kind.ufo_hybrid);
-enemy_type = enemy_kind.ufo_striker;
+enemy_type = choose(enemy_kind.ufo_striker, enemy_kind.ufo_shooter, enemy_kind.ufo_hybrid);
 
 // Variables related to the current enemy state
-enemy_current_state = enemy_states.idle;
+enemy_current_state = enemy_states.spawn;
 enemy_last_state = enemy_current_state;
 
 // Movement related variables

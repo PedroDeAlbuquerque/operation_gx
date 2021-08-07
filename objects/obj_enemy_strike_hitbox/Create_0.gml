@@ -1,5 +1,9 @@
 /// @description Initialize the strike hitbox
 
+// Play attack sound
+audio_play_sound(snd_physical, 1, false);
+audio_sound_gain(snd_physical, obj_game_audio_controller.audio_sound_volume, 0);
+
 // Variable to store the strike hitbox owner
 strike_hitbox_owner = -1;
 

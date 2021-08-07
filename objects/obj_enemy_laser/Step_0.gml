@@ -19,6 +19,8 @@ if place_meeting(x, y, obj_player_controller) {
 				// Set player to death state
 				current_player.player_last_state = current_player.player_current_state;
 				current_player.player_current_state = player_states.death;
+				audio_play_sound(snd_death, 1, false);
+				audio_sound_gain(snd_death, obj_game_audio_controller.audio_sound_volume, 0);
 			
 				// Set enemy death horizontal and vertical speed
 				current_player.player_horizontal_speed = laser_horizontal_direction;

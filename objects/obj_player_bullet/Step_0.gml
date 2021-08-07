@@ -19,6 +19,8 @@ if place_meeting(x, y, obj_enemy_controller) {
 				// Set enemy to death state
 				current_enemy.enemy_last_state = current_enemy.enemy_current_state;
 				current_enemy.enemy_current_state = enemy_states.death;
+				audio_play_sound(snd_death, 1, false);
+				audio_sound_gain(snd_death, obj_game_audio_controller.audio_sound_volume, 0);
 			
 				// Set enemy death horizontal and vertical speed
 				current_enemy.enemy_horizontal_speed = bullet_horizontal_direction;

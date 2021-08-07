@@ -194,6 +194,8 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 						x = player_respawn_x;
 						y = player_respawn_y;
 						player_current_state = player_states.spawn;
+						audio_play_sound(snd_respawn, 1, false);
+						audio_sound_gain(snd_respawn, obj_game_audio_controller.audio_sound_volume, 0);
 						player_last_state = player_current_state;
 						player_screen_flash = -1;
 						player_screen_chromatic_aberration = 1;

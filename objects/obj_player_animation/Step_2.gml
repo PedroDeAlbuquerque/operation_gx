@@ -86,7 +86,7 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 									break;
 							}
 							// Execute combo with time gap for better feeling
-							if (player_sword_combo_timer <= 10) and combo_button_is_pressed {
+							if (player_sword_combo_timer <= 5) and combo_button_is_pressed {
 								other.image_index = 0;
 								player_sword_combo_is_being_executed = true;
 								player_sword_combo_timer = player_sword_combo_max_timer;
@@ -114,7 +114,7 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 								}
 								
 								if player_sword_hitbox != -1 and instance_exists(player_sword_hitbox) { // Handle combo finish when hitbox is already generated
-									if player_sword_combo_timer <= -15 {
+									if player_sword_combo_timer <= -20 {
 										player_current_state = player_last_state;
 										player_last_state = player_states.attack;
 								

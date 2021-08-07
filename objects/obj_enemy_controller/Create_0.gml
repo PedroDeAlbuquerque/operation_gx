@@ -20,8 +20,8 @@ enemy_base_speed = 2;
 // Variables related to enemy strike
 enemy_strike_hitbox = -1;
 // Laser shot related variables
-enemy_laser_shot_is_executed = false;
-enemy_laser_shot_max_delay = 10;
+enemy_laser_shot_is_executed = true;
+enemy_laser_shot_max_delay = 30;
 enemy_laser_shot_delay = enemy_laser_shot_max_delay;
 // Variables related to hybrid enemy
 enemy_hybrid_is_shooting = choose(true, false);

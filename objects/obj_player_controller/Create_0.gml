@@ -34,7 +34,7 @@ player_max_dash_delay = 30;
 player_current_dash_delay = player_max_dash_delay;
 // Sword attack related variables
 player_sword_hitbox = -1;
-player_sword_combo_max_timer = 15;
+player_sword_combo_max_timer = 10;
 player_sword_combo_timer = player_sword_combo_max_timer;
 player_sword_combo_is_being_executed = false;
 // Bullet shot related variables

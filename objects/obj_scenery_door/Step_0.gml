@@ -15,6 +15,10 @@ if door_teleport_x != x or door_teleport_y != y {
 				current_player.player_screen_chromatic_aberration = 1;
 				current_player.x = door_teleport_x;
 				current_player.y = door_teleport_y;
+				
+				// Play audio for transition effect
+				audio_play_sound(snd_respawn, 1, false);
+				audio_sound_gain(snd_respawn, obj_game_audio_controller.audio_sound_volume, 0);
 			}
 		}
 

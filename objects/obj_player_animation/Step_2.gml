@@ -55,7 +55,7 @@ if player_animation_owner != -1 and instance_exists(player_animation_owner) {
 						image_index = sprite_get_number(sprite_index) - 4; // Hold first attack frame
 						
 						with player_animation_owner {
-							if player_sword_hitbox == -1 { // Generate sword hitbox if it doesn't exists
+							if player_sword_hitbox == -1 and player_sword_combo_timer == player_sword_combo_max_timer { // Generate sword hitbox if it doesn't exists
 								player_sword_hitbox = instance_create_layer(x + (sign(other.image_xscale) * 22), y, "Collision_Layer", obj_player_sword_hitbox);
 								player_sword_hitbox.sword_hitbox_owner = id;
 							}

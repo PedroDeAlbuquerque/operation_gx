@@ -14,6 +14,9 @@ npc_horizontal_speed = 0;
 npc_vertical_speed = 0;
 npc_base_speed = 1;
 
+// Dialog box related variables
+npc_dialog_box = -1;
+
 // Variables related to player animation
 npc_animation = instance_create_layer(x, y, "Animation_Layer", obj_npc_gothic_girl_animation);
 npc_animation.npc_animation_owner = id;

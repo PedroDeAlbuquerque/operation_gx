@@ -18,6 +18,22 @@ switch npc_current_state {
 		break;
 }
 
+// Handle dialog box appearing and disappearing
+if distance_to_object(obj_player_controller) < 50 { // Generate dialog box if player is near enough
+	if npc_dialog_box == -1 {
+		npc_dialog_box = instance_create_layer(x, y, "DialogBox_Layer", obj_dialog_box);
+		npc_dialog_box.dialog_box_x_offset = -50;
+		npc_dialog_box.dialog_box_y_offset = -60;
+		npc_dialog_box.dialog_box_text = "This is just a test textbox";
+		npc_dialog_box.dialog_box_owner = id;
+	}
+} else { // Delete dialog box if player is distant enough
+	if npc_dialog_box != -1 and instance_exists(npc_dialog_box) {
+		instance_destroy(npc_dialog_box);
+		npc_dialog_box = -1;
+	}
+}
+
 // Handle npc collision and movement based on current speed
 repeat(abs(npc_horizontal_speed)) {
 	if place_meeting(x + sign(npc_horizontal_speed), y, obj_scenery_wall) {

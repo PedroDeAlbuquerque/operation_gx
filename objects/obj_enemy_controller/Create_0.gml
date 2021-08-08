@@ -32,7 +32,7 @@ enemy_target_player_max_delay = 15;
 enemy_target_player_delay = enemy_target_player_max_delay; 
 
 // Variables related to player animation
-enemy_animation = instance_create_layer(x, y, "Animation_Bottom_Layer", obj_enemy_animation);
+enemy_animation = instance_create_layer(x, y, "Animation_Enemy_Layer", obj_enemy_animation);
 enemy_animation.enemy_animation_owner = id;
 
 // Set image alpha

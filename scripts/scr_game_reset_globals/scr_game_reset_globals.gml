@@ -5,8 +5,6 @@ function scr_game_reset_globals(){
 	global.resolution_height = 270;
 
 	// Shader related globals
-	global.shader_width = 480;
-	global.shader_height = 270;
 	global.shader_full_view_flash = 0;
 	global.shader_left_view_flash = 0;
 	global.shader_right_view_flash = 0;

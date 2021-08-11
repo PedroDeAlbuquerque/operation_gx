@@ -2,7 +2,7 @@
 
 // Handle bullet movement
 if laser_horizontal_direction != 0 {
-	x += 4 * laser_horizontal_direction;
+	x += 2 * laser_horizontal_direction;
 }
 
 // Handle laser collision on enemies

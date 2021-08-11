@@ -40,7 +40,7 @@ function scr_enemy_action_controller(argument0){
 						if enemy_target_player.x >= x {
 							shooting_distance = -shooting_distance;
 						}
-						var ufo_shooter_speed = enemy_base_speed + 1;
+						var ufo_shooter_speed = enemy_base_speed;
 						var target_direction = point_direction(x, y, enemy_target_player.x + shooting_distance, enemy_target_player.y);
 						enemy_horizontal_speed = lengthdir_x(ufo_shooter_speed, target_direction);
 						enemy_vertical_speed = lengthdir_y(ufo_shooter_speed, target_direction);

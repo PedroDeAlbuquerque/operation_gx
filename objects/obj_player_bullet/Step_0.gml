@@ -59,6 +59,22 @@ if place_meeting(x, y, obj_enemy_controller) {
 	instance_destroy();
 }
 
+// Handle sword hitbox on laser shot
+if place_meeting(x, y, obj_enemy_laser) {
+	var laser_shot_list = ds_list_create();
+	var number_of_laser_shots = instance_place_list(x, y, obj_enemy_laser, laser_shot_list, false);
+	
+	if number_of_laser_shots > 0 {
+		for (var i = 0; i < number_of_laser_shots; i++) {
+			// Handle laser shot deletion
+			var current_laser = laser_shot_list[| i]; // Get current laser being hit by sword
+			
+			// Delete current laser being hit by sword
+			instance_destroy(current_laser);
+		}
+	}
+}
+
 // Delete bullet if it hits wall
 if place_meeting(x, y, obj_scenery_wall) {
 	instance_destroy();

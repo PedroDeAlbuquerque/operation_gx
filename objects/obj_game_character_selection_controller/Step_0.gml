@@ -55,7 +55,7 @@ if character_selection_delay <= 0 {
 					break;
 			}
 		
-			if obj_game_buttons_controller.buttons_rightgroup_dashtalk_key_input {
+			if obj_game_buttons_controller.buttons_rightgroup_attack_key_input {
 				obj_game_player_spawner.player_spawner_first_character = character_selection_player_kind;
 				room_goto_next();
 			}

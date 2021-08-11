@@ -24,7 +24,7 @@ if distance_to_object(obj_player_controller) < 50 { // Generate dialog box if pl
 		npc_dialog_box = instance_create_layer(x, y, "DialogBox_Layer", obj_dialog_box);
 		npc_dialog_box.dialog_box_x_offset = -50;
 		npc_dialog_box.dialog_box_y_offset = -60;
-		npc_dialog_box.dialog_box_text = "This is just a test textbox";
+		npc_dialog_box.dialog_box_text = "BEAT THE UFOS!";
 		npc_dialog_box.dialog_box_owner = id;
 	}
 } else { // Delete dialog box if player is distant enough

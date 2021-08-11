@@ -9,11 +9,19 @@ function scr_game_camera_split_view_update(){
 		right_view_target = player_two_target;
 		camera_highscore_left_view = global.highscore_player_one;
 		camera_highscore_right_view = global.highscore_player_two;
+		global.player_one_is_on_left_view = true;
+		global.player_one_is_on_right_view = false;
+		global.player_two_is_on_right_view = true;
+		global.player_two_is_on_left_view = false;
 	} else {
 		left_view_target = player_two_target;
 		right_view_target = player_one_target;
 		camera_highscore_left_view = global.highscore_player_two;
 		camera_highscore_right_view = global.highscore_player_one;
+		global.player_two_is_on_left_view = true;
+		global.player_two_is_on_right_view = false;
+		global.player_one_is_on_right_view = true;
+		global.player_one_is_on_left_view = false;
 	}
 	
 	if left_view_target != noone and instance_exists(left_view_target) { // Only handle left camera view if player one exists

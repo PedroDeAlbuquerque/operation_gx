@@ -16,6 +16,12 @@ global.shader_full_view_chromatic_aberration = 0;
 global.shader_left_view_chromatic_aberration = 0;
 global.shader_right_view_chromatic_aberration = 0;
 
+// Globals to set which side each player is
+global.player_one_is_on_left_view = false;
+global.player_two_is_on_left_view = false;
+global.player_one_is_on_right_view = false;
+global.player_two_is_on_right_view = false;
+
 // Gamepad related globals
 global.gamepad_one_identifier = noone;
 global.gamepad_two_identifier = noone;

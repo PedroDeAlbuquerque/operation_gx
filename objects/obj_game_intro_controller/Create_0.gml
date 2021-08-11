@@ -2,7 +2,7 @@
 
 intro_text_phase = 0;
 
-intro_text_one = "The UFOS have stolen the internet!";
+intro_text_one = "The UFOS have stolen the wi-fi!";
 intro_part_text_one = "";
 intro_part_text_one_count = 1;
 

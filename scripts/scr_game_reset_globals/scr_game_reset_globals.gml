@@ -21,6 +21,12 @@ function scr_game_reset_globals(){
 	// Camera related globals
 	global.camera_view_targets = array_create(2, noone);
 	global.camera_full_view_bounds = array_create(4);
+	
+	// Player side related globals
+	global.player_one_is_on_left_view = false;
+	global.player_two_is_on_left_view = false;
+	global.player_one_is_on_right_view = false;
+	global.player_two_is_on_right_view = false;
 
 	// Highscore related globals
 	global.highscore_player_one = 0;

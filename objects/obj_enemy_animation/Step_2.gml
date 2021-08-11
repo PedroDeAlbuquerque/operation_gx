@@ -126,6 +126,7 @@ if enemy_animation_owner != -1 and instance_exists(enemy_animation_owner) {
 							var laser_direction = sign(image_xscale);
 							var laser = instance_create_layer(x + (10 * laser_direction), y - 12, "Collision_Layer", obj_enemy_laser);
 							laser.laser_horizontal_direction = laser_direction;
+							laser.laser_sprite = 1;
 						
 							// Update image frame and set laser shot variable to avoid laser duplication
 							image_index++;
